@@ -1,0 +1,18 @@
+eureka:
+    instance:
+      # eureka客户需要多长时间发送心跳给eureka服务器，表明它仍然活着,默认为30 秒
+      leaseRenewalIntervalInSeconds: 10
+      # Eureka服务器在接收到实例的最后一次发出的心跳后，需要等待多久才可以将此实例删除，默认为90秒
+      leaseExpirationDurationInSeconds: 30
+      prefer-ip-address: true
+      status-page-url-path: ${server.servlet.contextPath}/swagger-ui.html
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8881
+  servlet:
+    contextPath: /user
+spring:
+  application:
+    name: service-user
