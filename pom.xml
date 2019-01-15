@@ -24,6 +24,7 @@
     <modules>
         <module>eureka-server</module>
         <module>user-server</module>
+        <module>ribbon-user-server</module>
     </modules>
 
     <dependencies>
