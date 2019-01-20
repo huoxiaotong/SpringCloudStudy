@@ -10,10 +10,10 @@
     </parent>
 
     <groupId>com.mumu</groupId>
-    <artifactId>ribbon-user-server</artifactId>
+    <artifactId>feign-user-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ribbon-user-server</name>
-    <description>服务消费者（rest+ribbon）</description>
+    <name>feign-user-server</name>
+    <description>服务消费者（Feign）</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -25,10 +25,15 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+<!--        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -25,6 +25,7 @@
         <module>eureka-server</module>
         <module>user-server</module>
         <module>ribbon-user-server</module>
+        <module>feign-user-server</module>
     </modules>
 
     <dependencies>
