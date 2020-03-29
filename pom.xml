@@ -22,12 +22,12 @@
     </properties>
 
     <modules>
-        <module>eureka-server</module>
-        <module>user-server</module>
-        <module>ribbon-user-server</module>
-        <module>feign-user-server</module>
-        <module>config-server</module>
-        <module>config-client</module>
+        <module>spring-boot</module>
+        <module>spring-cloud</module>
+
+        <module>lean-java</module>
+        <module>java-sip</module>
+
     </modules>
 
     <dependencies>
