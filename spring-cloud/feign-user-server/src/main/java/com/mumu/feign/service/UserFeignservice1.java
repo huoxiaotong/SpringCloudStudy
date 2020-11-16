@@ -5,9 +5,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(value = "user-service/user" /*contextId = "user1"*/)
-public interface UserFeignservice {
+/*
+2.2.4版本自持这总写法。
+contextId = "user1"
+*/
+@FeignClient(value = "user-service/user")
+public interface UserFeignservice1 {
 
-    @RequestMapping(value = "/info",method = RequestMethod.GET)
+    @RequestMapping(value = "/info1",method = RequestMethod.GET)
     String sayHiFromClientOne(@RequestParam(value = "name") String name);
 }

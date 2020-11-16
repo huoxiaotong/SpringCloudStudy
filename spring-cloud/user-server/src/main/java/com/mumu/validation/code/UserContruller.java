@@ -23,4 +23,9 @@ public class UserContruller {
         return "hello word !name="+name+",port="+port;
     }
 
+    @GetMapping("info1")
+    public String getinfo1(@RequestParam String name){
+        return "hello word !name1="+name+",port="+port;
+    }
+
 }
