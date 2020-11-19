@@ -3,8 +3,6 @@ package com.mumu.json;
 import com.google.gson.*;
 import com.mumu.entity.Company;
 
-import java.util.Objects;
-
 /**
  * @ClassName GSONTest
  * @Description: TODO
@@ -25,10 +23,6 @@ public class GSONTest {
         }
     }
     public static void main(String[] args){
-
-
-
-        Gson gson = new Gson();
         Company company = new Company();
 
         company.setId(1L);

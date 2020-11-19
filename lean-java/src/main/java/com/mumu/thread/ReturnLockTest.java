@@ -1,6 +1,5 @@
 package com.mumu.thread;
 
-import java.util.TreeMap;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class ReturnLockTest {

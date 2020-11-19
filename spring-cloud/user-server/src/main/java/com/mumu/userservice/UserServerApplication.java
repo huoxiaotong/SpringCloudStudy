@@ -1,4 +1,4 @@
-package com.mumu.configclient;
+package com.mumu.userservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class ConfigClientApplication {
+public class UserServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConfigClientApplication.class, args);
+        SpringApplication.run(UserServerApplication.class, args);
     }
 
 }

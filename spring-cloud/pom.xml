@@ -19,7 +19,6 @@
         <module>config-server</module>
         <module>config-client</module>
         <module>user-server</module>
-        <module>spring-sdk</module>
     </modules>
 
 

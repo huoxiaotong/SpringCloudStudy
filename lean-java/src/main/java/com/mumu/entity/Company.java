@@ -12,7 +12,11 @@ import java.io.Serializable;
  */
 public class Company implements Serializable {
 
-    private Long id;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -8169394079293631603L;
+	private Long id;
     private String name;
     private String address;
 
