@@ -1,4 +1,4 @@
-package com.mumu.feign;
+package com.mumu.userfeign;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
