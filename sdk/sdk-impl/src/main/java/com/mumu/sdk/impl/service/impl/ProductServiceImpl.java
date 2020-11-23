@@ -3,7 +3,6 @@ package com.mumu.sdk.impl.service.impl;
 
 import com.mumu.sdk.SdkException;
 import com.mumu.sdk.api.model.Product;
-import com.mumu.sdk.api.model.ThirdProductA;
 import com.mumu.sdk.api.service.ProductService;
 import com.mumu.sdk.common.GenericTypeUtils;
 import com.mumu.sdk.impl.service.inner.InnerProductService;

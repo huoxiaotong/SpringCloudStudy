@@ -1,7 +1,6 @@
 package com.mumu.sdk.service;
 
 import com.mumu.sdk.SdkServerApplicationTest;
-import com.mumu.sdk.api.model.ThirdProductA;
 import com.mumu.sdk.api.model.ThirdProductB;
 import com.mumu.sdk.api.service.ProductService;
 import org.junit.Test;

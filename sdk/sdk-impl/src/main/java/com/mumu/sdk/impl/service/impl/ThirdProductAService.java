@@ -1,22 +1,15 @@
 package com.mumu.sdk.impl.service.impl;
 
-
 import com.mumu.sdk.api.model.Product;
 import com.mumu.sdk.api.model.ThirdProductA;
-import com.mumu.sdk.api.service.ProductService;
-import com.mumu.sdk.common.GenericTypeUtils;
 import com.mumu.sdk.impl.entity.ThirdProductEnA;
 import com.mumu.sdk.impl.service.inner.BaseInnerProductServiceImpl;
 import com.mumu.sdk.impl.service.inner.InnerProductService;
-import org.springframework.aop.support.AopUtils;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 @Service
 public class ThirdProductAService extends BaseInnerProductServiceImpl<ThirdProductA, ThirdProductEnA> {
