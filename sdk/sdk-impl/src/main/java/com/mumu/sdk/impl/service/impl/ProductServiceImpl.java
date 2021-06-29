@@ -1,10 +1,10 @@
 package com.mumu.sdk.impl.service.impl;
 
 
-import com.mumu.sdk.SdkException;
+import com.mumu.sdk.api.exception.SdkException;
 import com.mumu.sdk.api.model.Product;
 import com.mumu.sdk.api.service.ProductService;
-import com.mumu.sdk.common.GenericTypeUtils;
+import com.mumu.sdk.impl.common.GenericTypeUtils;
 import com.mumu.sdk.impl.service.inner.InnerProductService;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.factory.InitializingBean;
@@ -28,6 +28,11 @@ public class ProductServiceImpl implements ProductService, InitializingBean {
     public <P extends Product> P getProduct(Class<P> clazz, String code) {
 
         return this.getInnerExtProduct(clazz).getProduct(code);
+    }
+
+    @Override
+    public void error() {
+
     }
 
     private <P extends Product> InnerProductService<P> getInnerExtProduct(Class<P> clazz) {

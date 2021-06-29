@@ -5,4 +5,6 @@ import com.mumu.sdk.api.model.Product;
 public interface ProductService {
 
     <P extends Product> P getProduct(Class<P> clazz, String code);
+
+    void error();
 }

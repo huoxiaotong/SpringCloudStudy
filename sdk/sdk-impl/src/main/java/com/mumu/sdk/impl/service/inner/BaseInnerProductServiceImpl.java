@@ -1,7 +1,7 @@
 package com.mumu.sdk.impl.service.inner;
 
 import com.mumu.sdk.api.model.Product;
-import com.mumu.sdk.common.GenericTypeUtils;
+import com.mumu.sdk.impl.common.GenericTypeUtils;
 import com.mumu.sdk.impl.entity.ProductEn;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.BeanUtils;
@@ -26,6 +26,7 @@ public class BaseInnerProductServiceImpl<P extends Product, E extends ProductEn>
     @Override
     public P getProduct(String code) {
         P product = BeanUtils.instantiateClass(this.modelClass);
+        product.setCode(code);
         return product;
     }
 

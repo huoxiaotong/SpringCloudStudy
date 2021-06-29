@@ -1,4 +1,4 @@
-package com.mumu.sdk;
+package com.mumu.sdk.api.exception;
 
 public class SdkException extends RuntimeException {
 

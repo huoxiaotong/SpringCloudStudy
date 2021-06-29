@@ -1,6 +1,6 @@
-package com.mumu.sdk.common;
+package com.mumu.sdk.impl.common;
 
-import com.mumu.sdk.SdkException;
+import com.mumu.sdk.api.exception.SdkException;
 import org.apache.commons.lang3.reflect.TypeUtils;
 
 import java.lang.reflect.Type;
