@@ -5,7 +5,6 @@ import lombok.Data;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.List;
 
 /**
  * @ClassName Company
@@ -16,10 +15,9 @@ import java.util.List;
  * @Modified By:
  */
 @Data
-public class Company extends BaseEntity implements Serializable {
+public class User extends BaseEntity implements Serializable {
     private String address;
     private BigDecimal money;
     private Date createTime;
     private Date updateTime;
-    private List<User> users;
 }
