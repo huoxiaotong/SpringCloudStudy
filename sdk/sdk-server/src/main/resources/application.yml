@@ -3,11 +3,24 @@ server:
   servlet:
     contextPath: /sdk
 
-spring:
-  application:
-    name: sdk-server
-
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: sdk-server
+  devtools:
+    restart:
+      enabled: false
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3309/sdk?serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: 123456
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: create  # 第一次建表create  后面用update，要不然每次重启都会新建表
+    show-sql: true

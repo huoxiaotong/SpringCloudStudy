@@ -13,6 +13,18 @@ public class BaseInnerProductServiceImpl<P extends Product, E extends ProductEn>
     private Class<P> modelClass;
     private Class<E> entityClass;
 
+    @Override
+    public P getProduct(String code) {
+        P product = BeanUtils.instantiateClass(this.modelClass);
+        product.setCode(code);
+        return product;
+    }
+
+
+
+
+
+
     protected BaseInnerProductServiceImpl() {
         this.initTypeParam();
     }
@@ -23,12 +35,7 @@ public class BaseInnerProductServiceImpl<P extends Product, E extends ProductEn>
         this.entityClass = GenericTypeUtils.getActualType(clazz, BaseInnerProductServiceImpl.class, ENTITY);
     }
 
-    @Override
-    public P getProduct(String code) {
-        P product = BeanUtils.instantiateClass(this.modelClass);
-        product.setCode(code);
-        return product;
-    }
+
 
 
 }

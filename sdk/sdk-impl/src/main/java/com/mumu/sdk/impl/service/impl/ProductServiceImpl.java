@@ -1,6 +1,5 @@
 package com.mumu.sdk.impl.service.impl;
 
-
 import com.mumu.sdk.api.exception.SdkException;
 import com.mumu.sdk.api.model.Product;
 import com.mumu.sdk.api.service.ProductService;
@@ -35,15 +34,16 @@ public class ProductServiceImpl implements ProductService, InitializingBean {
 
     }
 
-    private <P extends Product> InnerProductService<P> getInnerExtProduct(Class<P> clazz) {
-       return (InnerProductService<P>) Optional.ofNullable(this.serviceMap.get(clazz)).orElseThrow(() -> new SdkException(""));
-    }
-
     @Override
     public void afterPropertiesSet() throws Exception {
         this.serviceMap = this.services.stream()
                 .collect(Collectors.toMap(this::getClazz, Function.identity()));
     }
+
+    private <P extends Product> InnerProductService<P> getInnerExtProduct(Class<P> clazz) {
+        return (InnerProductService<P>) Optional.ofNullable(this.serviceMap.get(clazz)).orElseThrow(() -> new SdkException(""));
+    }
+
     private <P extends Product> Class<P> getClazz(InnerProductService<P> service) {
         Class<?> clazz = AopUtils.getTargetClass(service);
         Class<P> pClass = GenericTypeUtils.getActualType(clazz, InnerProductService.class, MODEL);
